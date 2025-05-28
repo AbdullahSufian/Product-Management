@@ -1,0 +1,355 @@
+
+:root {
+  --bg-color: #1e1e2f;
+  --text-color: #f4f4f4;
+  --input-bg: #1f1f2e;
+  --input-border: #444;
+  --accent: #4fc3f7;
+  --card-bg: #2a2a40;
+  --table-bg: #29293d;
+  --header-bg: #3c3c56;
+  --danger: #e53935;
+}
+
+body.light {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --accent: #1976d2;
+  --card-bg: #fff;
+  --table-bg: #f9f9f9;
+  --header-bg: #e0e0e0;
+  --danger: #d32f2f;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+.crud {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px #00000040;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.head h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.head p {
+  font-size: 1.2rem;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Grid layout for inputs */
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+  transform: scale(1.02);
+}
+
+/* Total box and button */
+#total {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#total::before {
+  content: "Total: ";
+  color: var(--accent);
+}
+
+#submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background: #03a9f4;
+}
+
+/* Button group */
+.btnSearchGroup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  
+}
+
+.btnSearchGroup button {
+  background-color: var(--accent);
+  color: #000;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnSearchGroup button:hover {
+  background-color: #03a9f4;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--table-bg);
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  text-align: center;
+}
+
+th {
+  background: var(--header-bg);
+  text-transform: uppercase;
+}
+
+/* Delete All */
+#deleteAll {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#deleteAll button {
+  background-color: var(--danger);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#deleteAll button:hover {
+  background-color: #c62828;
+}
+
+
+body {
+  background-color: #1e1e2f;
+  color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.crud {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  background: #2a2a40;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.head h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #4fc3f7;
+}
+
+input {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  background: #000;
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #4fc3f7;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: 0.3s;
+  
+}
+
+button:hover {
+  background-color: #03a9f4;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #29293d;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  color: #eee;
+}
+
+th {
+  background: #3c3c56;
+  text-transform: uppercase;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #2e2e44;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.inputs input,
+.inputs button {
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: 1px solid #444;
+  background-color: #1f1f2e;
+  margin: 4px 0;
+  border-radius: 10px;
+  padding: 0 12px;
+  color: #f0f0f0;
+  transition: 0.3s ease;
+  
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  background: #111;
+  border-color: #4fc3f7;
+  box-shadow: 0 0 5px #4fc3f7;
+  transform: scale(1.02);
+}
+
+/* تحسين مجموعة الأسعار */
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.price input {
+  flex: 1 1 100px;
+}
+
+/* توسيط وإبراز total */
+#total {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  min-width: 120px;
+}
+
+#total::before {
+  content: "Total: ";
+  color: #4fc3f7;
+}
+
+/* زر الإرسال */
+#submit {
+  background-color: #4fc3f7;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background-color: #03a9f4;
+  letter-spacing: 1px;
+}
+
+
+

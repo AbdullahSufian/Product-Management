@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Product Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="crud">
+    <div class="head">
+      <h2>Product Management</h2>
+      <p>Simple CRUD app</p>
+    </div>
+
+    <div class="inputs">
+      <input type="text" id="title" placeholder="Title">
+      <div class="price">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="taxes" placeholder="Taxes">
+        <input type="number" id="ads" placeholder="Ads">
+        <input type="number" id="discount" placeholder="Discount">
+        <small id="total"></small>
+      </div>
+      <input type="number" id="count" placeholder="Count">
+      <input type="text" id="category" placeholder="Category">
+      <button id="submit">Create</button>
+    </div>
+
+    <div class="btnSearchGroup">
+      <button onclick="setSearchMode('title')">Search By Title</button>
+      <button onclick="setSearchMode('category')">Search By Category</button>
+      <button onclick="exportToExcel()">Download as Excel</button>
+    </div>
+
+    <input type="text" id="search" placeholder="Search by Title" onkeyup="searchData(this.value)">
+
+    <div id="deleteAll"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Title</th><th>Price</th><th>Taxes</th>
+          <th>Ads</th><th>Discount</th><th>Total</th>
+          <th>Category</th><th>Update</th><th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
