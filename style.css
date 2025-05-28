@@ -352,4 +352,59 @@ input:focus {
 }
 
 
+/* Responsive layout tweaks */
+@media (max-width: 768px) {
+  .crud {
+    padding: 15px;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr !important;
+    padding: 15px;
+  }
+
+  .price {
+    flex-direction: column;
+  }
+
+  .btnSearchGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+
+  #submit, #themeToggle {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #themeToggle {
+    position: relative;
+    margin-top: 15px;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .head h2 {
+    font-size: 1.5rem;
+  }
+
+  .head p {
+    font-size: 1rem;
+  }
+
+  input, button {
+    font-size: 0.9rem;
+  }
+
+  #total {
+    font-size: 0.95rem;
+  }
+}
 
